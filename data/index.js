@@ -7,6 +7,8 @@ const quotes = [
 "motivational quote"
 ];
 
+const favQuotes = [];
+
 const newQuoteBtn = document.querySelector('.quotebtn');
 const p = document.querySelector('.js-para');
 
@@ -23,3 +25,9 @@ function newText() {
 };
 
 window.onload = newText;
+
+let fav = document.querySelector('.js-fav-btn');
+
+fav.addEventListener('click', () => {
+    console.log('added to fav')
+})
