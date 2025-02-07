@@ -1,60 +1,82 @@
+/* @font-face {
+    font-family: 
+    src: url();
+} */
+
 body {
     margin: 0;
     height: 100%;
     text-align: center;
     justify-content: center;
-    animation: colorChange 20s infinite alternate;
+    /* animation: colorChange 20s infinite alternate; */
+    background-image: url("images/pplhearts.gif");
 }
 
 
 h1 {
-    font-family: "Dancing Script", serif;
+    font-family: 'Dancing Script', serif;
     color: white;
     font-size: 60px;
     text-shadow: 1px 0 0 grey;
     padding: 5px;
 }
 
-
+.para {
+    padding: 5px;
+    font-size: larger;
+}
 
 
 .content {
 margin: 0 auto;
 background-color: white;
-
-padding: 20px;
+padding: 10px;
 height: 500px;
 box-shadow: 0px 0px 10px rgb(0 0 0 / 40%);
-width: 1000px;
+width: 1200px;
 border-radius: 10px;
-
-    
 }
 
 .header {
     position: sticky;
     top: 0;
+    margin: 0 auto;
+    width: 50%;
+    border-radius: 20px;
+    background-color: rgba(241, 241, 241, 0.5);
     
 }
 .quotebtn {
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     padding: 10px;
-    background-color: white;
+    background-color: aliceblue;
     border-radius: 10px;
-    box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
     border: none;
+
+    /* box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2); */
+    transition-duration: 0.4s;
     cursor: pointer;
 }
 
 .quotebtn:hover {
-    background-color: aliceblue;
-
+    background-color: lavender;
 }
 
-@keyframes colorChange{
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    color: rebeccapurple;
+    padding: 10px;
+   
+}
+
+/* @keyframes colorChange{
     0%{background-color: pink;}
     50%{background-color: plum;}
     75%{background-color: lightskyblue;}
     100%{background-color: pink;}
-}
+} */
 
