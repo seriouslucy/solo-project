@@ -1,0 +1,39 @@
+@font-face {
+    font-family: 'Venice';
+    src: url(fonts/venice_classic/VeniceClassic.ttf);
+}
+
+.lucyabout {
+    width: 200px;
+    height: 200px;
+    float: left;
+    position: relative;
+    border-radius: 50%;
+    transition-duration: 0.4s;
+    
+}
+
+.lucyabout:hover {
+    transform: translateY(-5px);
+}
+
+.abouttop {
+    position: relative;
+    left: 60px;
+    background-color: rgba(206, 188, 254, .5);
+    border: 2px dotted grey;
+    border-radius: 10px;
+    width: 90%;
+    height: 200px;
+    
+}
+
+.toppara {
+font-family: 'Venice';
+color: rebeccapurple;
+font-size:xx-large;
+position: relative;
+top: 10px;
+text-align: center;
+    
+}

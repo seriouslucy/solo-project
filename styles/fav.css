@@ -1,0 +1,18 @@
+body {
+    background-image: url('images/move_heart.gif');
+}
+
+.favs {
+    color: rgb(255, 210, 233);
+}
+
+.favs h2 {
+    font-family: 'Dancing Script', serif;
+    font-size: 40px;
+    text-shadow: 1px 0 0 rgb(255, 193, 7);
+    margin: 10px;
+}
+
+hr {
+    border-top: 2px dotted grey;
+}

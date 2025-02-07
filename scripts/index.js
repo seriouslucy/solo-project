@@ -1,13 +1,11 @@
+// ermmmmmm
 
-const quotes = [
-"meow",
-"placeholder",
-"another placeholder",
-"lorem ipsum",
-"motivational quote"
-];
+let fav = document.querySelector('.js-fav-btn');
 
-const favQuotes = [];
+fav.addEventListener('click', () => {
+    console.log('Added to favourites')
+    alert('Added to favourites!');
+})
 
 const newQuoteBtn = document.querySelector('.quotebtn');
 const p = document.querySelector('.js-para');
@@ -26,8 +24,3 @@ function newText() {
 
 window.onload = newText;
 
-let fav = document.querySelector('.js-fav-btn');
-
-fav.addEventListener('click', () => {
-    console.log('added to fav')
-})
