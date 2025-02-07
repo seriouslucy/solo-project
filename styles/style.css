@@ -1,9 +1,10 @@
-/* @font-face {
-    font-family: 
-    src: url();
-} */
+@font-face {
+    font-family: 'Dancing Script';
+    src: url('fonts/Dancing_Script/DancingScript-VariableFont_wght.ttf');
+} 
 
 body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
     margin: 0;
     height: 100%;
     text-align: center;
@@ -22,8 +23,10 @@ h1 {
 }
 
 .para {
-    padding: 5px;
-    font-size: larger;
+    margin-top: 150px;
+    padding: 10px;
+    font-size: 40px;
+    color: rebeccapurple;
 }
 
 
@@ -48,12 +51,14 @@ border-radius: 10px;
 }
 .quotebtn {
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+    width: 10%;
     padding: 10px;
     background-color: aliceblue;
+    color: black;
     border-radius: 10px;
     border: none;
-
-    /* box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2); */
+    box-shadow: 10px 12px 2px 1px rgba(0, 0, 255, .2); 
     transition-duration: 0.4s;
     cursor: pointer;
 }
