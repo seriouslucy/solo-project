@@ -75,7 +75,7 @@ border-radius: 10px;
 
 .quotebtn {
     font-family: 'Venice';
-    box-sizing: border-box;
+    
     font-size: x-large;
     width: 10%;
     padding: 10px;
@@ -96,9 +96,8 @@ border-radius: 10px;
 }
 
 .favbtn {
-    float: right;
     width: 10%;
-    padding: 10px;
+    padding: 5px;
     background: transparent;
     border-radius: 10px;
     color: black;
@@ -108,7 +107,6 @@ border-radius: 10px;
 }
 
 .favbtn:hover {
-    background-color: lavender;
     transform: translateY(-5px);
 }
 
@@ -136,3 +134,12 @@ border-radius: 10px;
     100%{background-color: pink;}
 } */
 
+.thebuttons {
+    display: flex;
+    justify-content: center;
+}
+
+.bunny {
+    position: relative;
+    margin-top: 25px;
+}
