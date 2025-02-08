@@ -50,3 +50,8 @@ h3 {
   
 }
 
+.corn:hover {
+    transition-duration: 0.2s;
+    transform: translateY(-5px);
+}
+
