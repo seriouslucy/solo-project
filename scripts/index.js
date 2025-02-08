@@ -1,10 +1,10 @@
-// ermmmmmm
+// ermmmmmm scratching my head and rubbing my chin 
 
 let fav = document.querySelector('.js-fav-btn');
 
 fav.addEventListener('click', () => {
     console.log('Added to favourites')
-    alert('Added to favourites!');
+    
 })
 
 const newQuoteBtn = document.querySelector('.quotebtn');

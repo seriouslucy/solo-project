@@ -3,7 +3,8 @@ const quotes = [
     "placeholder",
     "another placeholder",
     "lorem ipsum",
-    "motivational quote"
+    "motivational quote",
+    "I have to believe our worst moments don't make us monsters"
     ];
 
     // const quotes = [

@@ -15,4 +15,11 @@ body {
 
 hr {
     border-top: 2px dotted grey;
+    width: 80%;
 }
+
+.nav a {
+    color: rgb(234, 172, 183);
+}
+
+
