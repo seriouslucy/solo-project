@@ -1,4 +1,4 @@
-const quotes = [
+export const quotes = [
     "meow",
     "placeholder",
     "another placeholder",
@@ -10,20 +10,20 @@ const quotes = [
     // const quotes = [
     //     { 
     //         id: '1',
-    //         name: "meow"
+    //         quote: "meow"
     //         },
     //     {  
     //         id: '2',
-    //         name: "placeholder"},
+    //         quote: "placeholder"},
     //     {
     //         id: '3',
-    //         name: "another placeholder"},
+    //         quote: "another placeholder"},
     //     {
     //         id: '4',
-    //         name: "lorem ipsum"},
+    //         quote: "lorem ipsum"},
     //     {
     //         id: '5',
-    //         name: "motivational quote"}
+    //         quote: "motivational quote"}
     //     ];
 
     //idk i will figure it out
