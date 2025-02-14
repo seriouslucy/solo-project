@@ -1,2 +1,3 @@
-export const favQuotes = [];
+export const favQuotes = [
 
+];
