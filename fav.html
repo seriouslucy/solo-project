@@ -25,14 +25,21 @@
             <h2><img src="styles/images/flowers.gif" alt="heart shaped flowers">Your Favourite Quotes<img src="styles/images/flowers.gif" alt="heart shaped flowers"></h2>
 
             <hr>
-            <div class="favouriteList">
-            <!-- <p class="favcontent js-favcontent"></p>
-            </div> -->
+
+            
+            <div class="favouriteList js-favourite-list">
+            <p class="favcontent js-favcontent"></p>
+            </div>
+
+            <button class="newbtn js-new-btn"><img src="styles/images/edit.png" class="edit"></button>
+            <div class="newtext "hidden><label for="text"></label>
+                <input type="text" placeholder="Add quote..." class="newtext-js newtextcss">
+                <input type="submit" value="Submit" class="submitbtn js-submit-btn"></div>
             </div>
 
         <div class="footer">made by <a href="seriouslucy.neocities.org">Lucy</a> <img src="styles/images/eheart.gif" alt="moving heart"></div>
     
-        <script type="module" src="scripts/index.js"></script>
+        <script src="data/favourites.js"></script>
 
 </body>
 </html>
