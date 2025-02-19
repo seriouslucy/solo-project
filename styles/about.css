@@ -38,10 +38,14 @@ text-align: center;
 }
 
 .aboutpara {
+    display: block;
+    position: relative;
+    left: 5em;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: x-large;
+    font-size: large;
     color: rebeccapurple;
     margin-top: 2em;
+    width: 80%;
 }
 
 h3 {
