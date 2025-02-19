@@ -14,7 +14,20 @@ export const quotes = [
             quote: "The most certain way to succeed is always to try just one more time. - Thomas Edison"},
         {
             id: '5',
-            quote: "Start where you are. Use what you have. Do what you can. - Arthur Ashe"}
+            quote: "Start where you are. Use what you have. Do what you can. - Arthur Ashe"},
+        {
+            id: '6',
+            quote: "Success usually comes to those who are too busy to be looking for it. - Henry David Thoreau"},
+        {
+            id: '7',
+            quote: "Be not afraid of growing slowly; be afraid only of standing still. - Chinese Proverb"
+        },
+        {
+            id: '8',
+            quote: "I am no longer accepting the things I cannot change. I am changing the things I cannot accept. - Angela Davis"},
+        {
+            id: '9',
+            quote: "Education is not preparation for life; education is life itself. - John Dewey"},
         ];
 
     // idk i will figure it out

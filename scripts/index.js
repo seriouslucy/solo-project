@@ -10,9 +10,6 @@ newQuoteBtn.addEventListener('click', quoteHandler);
 
 let favBtn = document.querySelector('.js-fav-btn');
 favBtn.addEventListener('click', favHandler);
-
-let deleteBtn = document.querySelector('.js-delete-btn');
-deleteBtn.addEventListener('click', deleteHandler)
 };
 
 
@@ -22,11 +19,14 @@ let favText = document.querySelector('.favouriteList');
 
 
 function quoteHandler() {
+
     let p = document.querySelector('.js-para')
-    let randomQuote = Math.floor(Math.random() * quotes.length)
-    console.log(quotes[randomQuote].quote);
-    p.textContent = quotes[randomQuote].quote;
-    
+    let randomIndex = Math.floor(Math.random() * quotes.length)
+    console.log(quotes[randomIndex].quote);
+    p.innerHTML = quotes[randomIndex].quote;
+    // grab delete button 
+    // quotes.splice(randomIndex, 1)
+    // ^^^ to the eventlistener on btn
     
 };
 
@@ -36,13 +36,11 @@ function newText() {
 };
 
  function favHandler() {
+    let randomIndex = Math.floor(Math.random() * quotes.length)
+ localStorage.setItem('affirmationContent', quotes[randomIndex].quote )
  console.log('Added to favourites!')
  
 };
-
-function deleteHandler() {
-    console.log('deleted!')
-}
 
 window.onload = newText;
 

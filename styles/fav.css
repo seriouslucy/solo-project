@@ -26,11 +26,18 @@ hr {
     padding: 10px;
 }
 
+
+.favsCss {
+    display: flex;
+    justify-content: center;
+}
+
 .newbtn {
     width: 6%;
     background: transparent;
     border: none;
     transition-duration: 0.3s;
+    margin: 10px;
     
 }
 
@@ -42,3 +49,59 @@ hr {
     transform: translateY(5px);
 }
 
+.newtextcss {
+    padding: 10px;
+    width: 23em;
+    border-radius: 5px;
+    border: 2px dotted grey;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.submitbtn {
+    font-family: 'Venice';
+    font-size: larger;
+    background-color: aliceblue;
+    color: rebeccapurple;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 3px;
+    transition-duration: 0.3s;
+
+}
+
+.submitbtn:hover {
+    background-color: lavender;
+    color: blueviolet;
+    transform: translateY(-10px);
+    box-shadow: 8px 10px 2px 1px rgba(0, 0, 255, .2); 
+}
+
+.favcontent {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 25px;
+    padding: 10px;
+    list-style-type: none;
+    color: rebeccapurple;
+}
+
+.deletebtn {
+    font-family: 'Venice';
+    font-size: x-large;
+    width: 10%;
+    padding: 10px;
+    background-color: aliceblue;
+    color: rebeccapurple;
+    border-radius: 10px;
+    border: none;
+    transition-duration: 0.4s;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.deletebtn:hover {
+    background-color: lavender;
+    color: blueviolet;
+    transform: translateY(-10px);
+    box-shadow: 10px 12px 2px 1px rgba(0, 0, 255, .2); 
+}
