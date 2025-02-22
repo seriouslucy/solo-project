@@ -17,9 +17,9 @@ document.addEventListener('DOMContentLoaded', () => {
 // use the passed parameters to store the data
 
 
-export const favQuotes = [
+export const favQuotes = [];
 
-];
+const items = [];
 
 let addBtn = document.querySelector('.js-new-btn');
 addBtn.addEventListener('click', handleAddNewText);
@@ -30,6 +30,8 @@ submitBtn.addEventListener('click', submitHandler);
 let formBtn = document.querySelector('.newtext');
 
 let deleteBtn = document.querySelector('.js-delete-btn');
+
+
 
 
 
