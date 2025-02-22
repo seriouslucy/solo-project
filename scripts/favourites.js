@@ -1,10 +1,10 @@
 import { quotes } from "../data/quotes.js";
 
 
-// document.addEventListener('DOMContentLoaded', () => {
-//     let storageItem = localStorage.getItem('affirmationContent')
-//     document.querySelector('.favcontent').innerHTML = `${storageItem}`;
-// })
+document.addEventListener('DOMContentLoaded', () => {
+    let storageItem = localStorage.getItem('affirmationContent')
+    document.querySelector('.favcontent').innerHTML = `${storageItem}`;
+})
 
 
 // GOAL: create a reusable function that will store data in local storage by taking a key, value as a parameter
@@ -14,10 +14,7 @@ import { quotes } from "../data/quotes.js";
 // use the passed parameters to store the data
 
 
-
-
-
-const favQuotes = [
+export const favQuotes = [
 
 ];
 
@@ -45,7 +42,6 @@ let x = 0;
 }
 };
 
-
 function submitHandler() {
     let favListed = document.querySelector('.js-favcontent');
     let textValue = document.querySelector('.newtext-js').value;
@@ -54,6 +50,8 @@ function submitHandler() {
     console.log(favQuotes);
     li.appendChild(document.createTextNode(textValue));
     favListed.appendChild(li);
+    document.querySelector('.newtext-js').value = ''
+
 
     let removeButton = document.createElement('button');
     removeButton.appendChild(document.createTextNode('X'));
@@ -67,10 +65,6 @@ function submitHandler() {
 
     deleteBtn.addEventListener('click', () => {
       console.log('deleted') 
-      
-  })
-  
-  function removeHandler() {
-
-  }
+      document.querySelector('.favcontent').innerHTML = ''
+     });
   
