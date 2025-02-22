@@ -114,3 +114,14 @@ li{
     
     
 }
+
+.cssRemove {
+    font-family: 'Venice';
+  padding: 5px;
+  margin: 1em;
+  background-color: aliceblue;
+  color: blueviolet;
+  border: none;
+  border-radius: 5px;
+
+}

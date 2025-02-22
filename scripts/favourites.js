@@ -1,10 +1,10 @@
 import { quotes } from "../data/quotes.js";
 
 
-document.addEventListener('DOMContentLoaded', () => {
-    let storageItem = localStorage.getItem('affirmationContent')
-    document.querySelector('.favcontent').innerHTML = `${storageItem}`;
-})
+// document.addEventListener('DOMContentLoaded', () => {
+//     let storageItem = localStorage.getItem('affirmationContent')
+//     document.querySelector('.favcontent').innerHTML = `${storageItem}`;
+// })
 
 
 // GOAL: create a reusable function that will store data in local storage by taking a key, value as a parameter
@@ -29,7 +29,8 @@ submitBtn.addEventListener('click', submitHandler);
 
 let formBtn = document.querySelector('.newtext');
 
-let deleteBtn = document.querySelector('.js-delete-btn')
+let deleteBtn = document.querySelector('.js-delete-btn');
+
 
 
 let x = 0;
@@ -54,13 +55,22 @@ function submitHandler() {
     li.appendChild(document.createTextNode(textValue));
     favListed.appendChild(li);
 
+    let removeButton = document.createElement('button');
+    removeButton.appendChild(document.createTextNode('X'));
+    removeButton.classList.add('cssRemove')
+    li.appendChild(removeButton);
+    removeButton.addEventListener('click', () => {
+        li.remove();
+    })
+
 };
 
     deleteBtn.addEventListener('click', () => {
-      let randomIndex = Math.floor(Math.random() * quotes.length)
-      let deleteBtn = document.querySelector('.js-delete-btn');
       console.log('deleted') 
       
   })
   
+  function removeHandler() {
+
+  }
   
