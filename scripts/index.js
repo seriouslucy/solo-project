@@ -24,9 +24,6 @@ function quoteHandler() {
     let randomIndex = Math.floor(Math.random() * quotes.length)
     console.log(quotes[randomIndex].quote);
     p.innerHTML = quotes[randomIndex].quote;
-    // grab delete button 
-    // quotes.splice(randomIndex, 1)
-    // ^^^ to the eventlistener on btn
     
 };
 
@@ -36,9 +33,10 @@ function newText() {
 };
 
  function favHandler() {
-    let randomIndex = Math.floor(Math.random() * quotes.length)
- localStorage.setItem('affirmationContent', quotes[randomIndex].quote )
- console.log('Added to favourites!')
+    let p = document.querySelector('.js-para')
+    localStorage.setItem('affirmationContent', p.innerHTML)
+    console.log('Added to favourites!')
+    
  
 };
 

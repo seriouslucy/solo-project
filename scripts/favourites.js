@@ -4,7 +4,10 @@ import { quotes } from "../data/quotes.js";
 document.addEventListener('DOMContentLoaded', () => {
     let storageItem = localStorage.getItem('affirmationContent')
     document.querySelector('.favcontent').innerHTML = `${storageItem}`;
-})
+    
+    if(localStorage.length === 0)
+        document.querySelector('.favcontent').innerHTML = ''; 
+});
 
 
 // GOAL: create a reusable function that will store data in local storage by taking a key, value as a parameter
@@ -65,6 +68,8 @@ function submitHandler() {
 
     deleteBtn.addEventListener('click', () => {
       console.log('deleted') 
-      document.querySelector('.favcontent').innerHTML = ''
+      localStorage.clear();
+     if(localStorage.length === 0)
+      document.querySelector('.favcontent').innerHTML = ' ';
      });
   
