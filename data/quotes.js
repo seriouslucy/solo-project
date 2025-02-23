@@ -28,6 +28,16 @@ export const quotes = [
         {
             id: '9',
             quote: "Education is not preparation for life; education is life itself. - John Dewey"},
+        {
+            id: '10',
+            quote: "It is never too late to be what you might have been. - George Eliot"},
+        {
+            id: '11',
+             quote: "There is no better compass than compassion. - Amanda Gorman"},
+        {
+            id: '12',
+            quote: "Opportunities don't happen, you create them. - Chris Grosser"}
+            
         ];
 
     // idk i will figure it out
