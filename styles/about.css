@@ -3,6 +3,11 @@
     src: url(fonts/venice_classic/VeniceClassic.ttf);
 }
 
+@font-face {
+    font-family: 'Wayfarers Toybox';
+    src: url(fonts/wayfarer_s_toy_box/wayfarers-toy-box.ttf);
+}
+
 body {
     background-image: url('images/greenbg.png');
 }
@@ -95,11 +100,11 @@ text-align: center;
 .aboutpara {
     display: block;
     position: relative;
-    left: 7em;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: large;
+    left: 4.5em;
+    font-family: 'Venice';
+    font-size: 22px;
     color: seagreen;
-    margin-top: 2em;
+    margin-top: 1em;
     width: 80%;
 }
 
@@ -108,12 +113,14 @@ text-align: center;
     font-size: xx-large;
    color: seagreen;
    margin: 5px;
+   padding: 10px;
 }
 
 .corn {
     position: relative;
-    top: 3em;
-    
+    right: 1em;
+    top: 2em;
+
 }
 
 .corn:hover {
