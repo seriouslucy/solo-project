@@ -50,6 +50,8 @@ h1 {
 .para {
     margin-top: 5.5em;
     margin-left: 3em;
+    margin-right: 3em;
+    margin-bottom: 3em;
     padding: 10px;
     font-size: 35px;
     color: rebeccapurple;
@@ -146,17 +148,18 @@ border-radius: 10px;
 .thebuttons {
     display: flex;
     justify-content: center;
+    
 }
-
 
 .top-border {
     margin-top: 0;
 }
 
 .bottom-border {
-   position: relative;
-   top: 10em;
-
+   position: fixed;
+   bottom: 8em;
+   left: 3em;
+   right: 4em;
 }
 
 .bunny {
