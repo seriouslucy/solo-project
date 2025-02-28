@@ -1,46 +1,94 @@
-// ermmmmmm scratching my head and rubbing my chin 
-
-import {quotes} from '../data/quotes.js';
-
-function setupEventListeners() {
-
-let newQuoteBtn = document.querySelector('.quotebtn');
-let p = document.querySelector('.js-para');
-newQuoteBtn.addEventListener('click', quoteHandler);
-
-let favBtn = document.querySelector('.js-fav-btn');
-favBtn.addEventListener('click', favHandler);
-};
+import { quotes } from "../data/quotes.js";
+let data = JSON.parse(localStorage.getItem('affirmations'))
+let favs = [];
 
 
+data? favs = data : favs = []
+
+console.log(favs);
 
 
-let favText = document.querySelector('.favouriteList');
+displayRandomQuote(quotes);
 
-
-function quoteHandler() {
-
-    let p = document.querySelector('.js-para')
-    let randomIndex = Math.floor(Math.random() * quotes.length)
-    console.log(quotes[randomIndex].quote);
-    p.innerHTML = quotes[randomIndex].quote;
+document.addEventListener("click", function(event) {
+    if (event.target.classList.contains('click-me-btn')) {
+      displayRandomQuote(quotes);
+    } 
     
-};
+  });
 
-function newText() {
-    let randomText = Math.floor(Math.random() * quotes.length);
-    document.querySelector('.js-para').innerHTML = quotes[randomText].quote;
-};
+  document.addEventListener("click", (e) => {
+    if (e.target.classList.contains('js-fav-btn')) {
+    favHandler(favs)
+      }
+  })
 
- function favHandler() {
-    let p = document.querySelector('.js-para')
-    localStorage.setItem('affirmationContent', p.innerHTML)
-    console.log('Added to favourites!')
-    
- 
-};
 
-window.onload = newText;
+function displayRandomQuote(quoteList) {
+  let randomNumber = Math.floor(Math.random() * quoteList.length);
+  let randomQuote = quotes[randomNumber];
+  let quoteHTML = `<p ">${randomQuote.quote}</p>
+     <div class="thebuttons">
+            <button class="click-me-btn css-click-me-btn">Click Me</button>
+            <button data-quote-id="${randomQuote.id}" data-quote-text="${randomQuote.quote}" class="favbtn js-fav-btn"
+            ><img class='star-img' src='./styles/images/star.png'></button> 
+            </div> `;
+  let p = document.querySelector(".js-para");
+  p.innerHTML = quoteHTML;
+  console.log(randomQuote);
+}
 
-setupEventListeners();
+function favHandler(favs) {
+    let favBtn = document.querySelector(".js-fav-btn")
+    console.log("fav clicked")
 
+
+let id = favBtn.dataset.quoteId
+let quote = favBtn.dataset.quoteText
+
+  console.log(id, quote);
+  const alreadyFav = favs.some((f) => f.id === id);
+  console.log(alreadyFav);
+
+  if (!alreadyFav) {
+    favs.push({id, quote});
+  } else {
+    console.log("Already in favorites hoe!");
+  }
+
+  console.log(favs);
+  
+  localStorage.setItem("affirmations", JSON.stringify(favs))
+
+  displayRandomQuote(quotes)
+}
+
+// function setupEventListeners() {
+
+// let newQuoteBtn = document.querySelector('.quotebtn');
+// let p = document.querySelector('.js-para');
+// newQuoteBtn.addEventListener('click', quoteHandler);
+
+// let favBtn = document.querySelector('.js-fav-btn');
+// favBtn.addEventListener('click', favHandler);
+// };
+
+// let favText = document.querySelector('.favouriteList');
+
+// function quoteHandler() {
+
+//     let p = document.querySelector('.js-para')
+//     let randomIndex = Math.floor(Math.random() * quotes.length)
+//     console.log(quotes[randomIndex].quote);
+//     p.innerHTML = quotes[randomIndex].quote;
+
+// };
+
+//  function favHandler() {
+//     let p = document.querySelector('.js-para')
+//     localStorage.setItem('affirmationContent', p.innerHTML)
+//     console.log('Added to favourites!')
+
+// };
+
+// setupEventListeners();

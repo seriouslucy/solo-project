@@ -76,10 +76,9 @@ border-radius: 10px;
 }
 
 
-.quotebtn {
+.css-click-me-btn {
     font-family: 'Venice';
     font-size: x-large;
-    width: 10%;
     padding: 10px;
     background-color: aliceblue;
     color: rebeccapurple;
@@ -90,14 +89,14 @@ border-radius: 10px;
     cursor: pointer;
 }
 
-.quotebtn:hover {
+.css-click-me-btn:hover {
     background-color: lavender;
     color: blueviolet;
     transform: translateY(-10px);
     box-shadow: 10px 12px 2px 1px rgba(0, 0, 255, .2); 
 }
 
-.quotebtn:active {
+.css-click-me-btn:active {
     transform: translateY(10px);
     box-shadow: none;
     color: blue;
@@ -165,4 +164,8 @@ border-radius: 10px;
 .bunny {
     position: relative;
     margin-top: 25px;
+}
+
+.star-img {
+    width: 45%;
 }

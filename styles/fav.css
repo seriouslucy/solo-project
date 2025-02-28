@@ -58,7 +58,7 @@ hr {
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-.submitbtn {
+.css-submit-btn {
     font-family: 'Venice';
     font-size: larger;
     background-color: rgb(255, 236, 245);
@@ -71,7 +71,7 @@ hr {
 
 }
 
-.submitbtn:hover {
+.css-submit-btn:hover {
     background-color: rgb(255, 210, 233);
     color: rgb(252, 44, 92);
     transform: translateY(-10px);
@@ -161,3 +161,4 @@ transition-duration: 0.4s;
     right: 2em;
    
 }
+

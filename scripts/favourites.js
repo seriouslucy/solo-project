@@ -1,74 +1,115 @@
-import { quotes } from "../data/quotes.js";
-
-
-document.addEventListener('DOMContentLoaded', () => {
-    let storageItem = localStorage.getItem('affirmationContent')
-    document.querySelector('.favcontent').innerHTML = `${storageItem}`;
-    
-    if(localStorage.length === 0)
-        document.querySelector('.favcontent').innerHTML = ''; 
-});
-
-
-// GOAL: create a reusable function that will store data in local storage by taking a key, value as a parameter
-
-// create a function that can be used anywhere in my application
-// my function will take a key, value as parameters 
-// use the passed parameters to store the data
-
-
-export const favQuotes = [];
-
-const items = [];
-
 let addBtn = document.querySelector('.js-new-btn');
-addBtn.addEventListener('click', handleAddNewText);
+let formBtn = document.querySelector('.submit-btn');
+let newTextContainer = document.querySelector('.newtext')
+let clearBtn = document.querySelector('.js-clear-btn')
 
-let submitBtn = document.querySelector('.js-submit-btn');
-submitBtn.addEventListener('click', submitHandler);
-
-let formBtn = document.querySelector('.newtext');
-
-let deleteBtn = document.querySelector('.js-delete-btn');
-
+let data = JSON.parse(localStorage.getItem('affirmations'))
+const content = document.querySelector(".js-favcontent")
+addBtn.addEventListener("click", () => handleAddNewText())
 
 
 
+displayFavs(data)
+formBtn.addEventListener("click", submitHandler)
 
-let x = 0;
+function displayFavs(data) {
+    const favoritesHTML = data.map((d) => `
+    <li>${d.quote}</li> 
+    <button data-data-id="${d.id}" class="danger-btn">X</button>
+    `).join('')
 
- function handleAddNewText () {
-    if (x === 0) {
-        formBtn.removeAttribute("hidden");
-    x = 1;
-} else {
-    formBtn.setAttribute("hidden", true);
-    x = 0;
+    content.innerHTML = favoritesHTML
+    let dangerBtns = document.querySelectorAll(".danger-btn")
+
+    dangerBtns.forEach((b) => {
+        b.addEventListener("click", () => deleteHandler(b))
+    })
 }
-};
+
+
+
+function deleteHandler(b) {
+    let id = b.dataset.dataId
+    const filteredArr = data.filter((d) => d.id !== id)
+    localStorage.setItem('affirmations', JSON.stringify(filteredArr))
+    data = JSON.parse(localStorage.getItem('affirmations'))
+    displayFavs(data)
+}
+
+
 
 function submitHandler() {
-    let favListed = document.querySelector('.js-favcontent');
-    let textValue = document.querySelector('.newtext-js').value;
-    let li = document.createElement('li');
-    favQuotes.push(textValue);
-    console.log(favQuotes);
-    li.appendChild(document.createTextNode(textValue));
-    favListed.appendChild(li);
-    document.querySelector('.newtext-js').value = ''
+    const userInput = document.querySelector('.newtext-js')
+    let textValue = userInput.value
+    let id = String(Math.floor(Math.random() * 10000000000000))
+    do {
+        id = String(Math.floor(Math.random() * 10000000000000))
+    } while (id === data.id) 
+        
+        const newItem = {
+            id: id,
+            quote: textValue
+        }
+        data.push(newItem);
+        console.log(data);
+        
+        localStorage.setItem('affirmations', JSON.stringify(data))
+        data = JSON.parse(localStorage.getItem('affirmations'))
+        displayFavs(data)
+        
+
+    };
+    
+    
+    
+    let x = 0;
+    
+     function handleAddNewText () {
+        console.log('clicked')
+        if (x === 0) {
+            newTextContainer.removeAttribute("hidden");
+        x = 1;
+    } else {
+        newTextContainer.setAttribute("hidden", true);
+        x = 0;
+    }}
+    
+    
+    
+    // };
+    // document.addEventListener('DOMContentLoaded', () => {
+//     let storageItem = localStorage.getItem('affirmationContent')
+//     document.querySelector('.favcontent').innerHTML = `${storageItem} <button class="cssRemove">X</button>`;
+//     let removeButton = document.createElement('button');
+//     removeButton.addEventListener('click', () => {
+//         li.remove();
+//     })
+//     // grab button removeItem()
+//     if(localStorage.length === 0)
+//         document.querySelector('.favcontent').innerHTML = ''; 
+// });
+
+// export const favQuotes = [];
+// console.log(favQuotes);
+
+// const items = [];
+
+// addBtn.addEventListener('click', handleAddNewText);
+
+// let submitBtn = document.querySelector('.js-submit-btn');
+// submitBtn.addEventListener('click', submitHandler);
 
 
-    let removeButton = document.createElement('button');
-    removeButton.appendChild(document.createTextNode('X'));
-    removeButton.classList.add('cssRemove')
-    li.appendChild(removeButton);
-    removeButton.addEventListener('click', () => {
-        li.remove();
-    })
 
-};
 
-    deleteBtn.addEventListener('click', () => {
+
+
+
+
+
+
+
+    clearBtn.addEventListener('click', () => {
       console.log('deleted') 
       localStorage.clear();
      if(localStorage.length === 0)
