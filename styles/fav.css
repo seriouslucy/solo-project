@@ -79,10 +79,17 @@ hr {
 }
 
 .favcontent {
+    
     font-family: Georgia, 'Times New Roman', Times, serif;
     padding: 5px;
     font-size: x-large;
     color: rgb(234, 172, 183);
+}
+
+.quote-data {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 .deletebtn {
@@ -111,12 +118,11 @@ li {
     font-size: x-large;
     padding: 2px;
     width: 60%;
-    margin: auto;
     text-align: center;
     list-style-type: none;
 }
 
-.cssRemove {
+.css-danger-btn {
 
 font-family: 'Venice';
 font-size: large;
@@ -130,7 +136,7 @@ transition-duration: 0.4s;
 
 }
 
-.cssRemove:hover {
+.css-danger-btn:hover {
     background-color: lavender;
     color: rgb(252, 44, 92);
     transform: translateY(-5px);

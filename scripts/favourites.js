@@ -14,8 +14,10 @@ formBtn.addEventListener("click", submitHandler)
 
 function displayFavs(data) {
     const favoritesHTML = data.map((d) => `
+    <div class="quote-data">
     <li>${d.quote}</li> 
-    <button data-data-id="${d.id}" class="danger-btn">X</button>
+    <button data-data-id="${d.id}" class="danger-btn css-danger-btn">X</button>
+    </div>
     `).join('')
 
     content.innerHTML = favoritesHTML
@@ -62,9 +64,9 @@ function submitHandler() {
     
     
     
-    let x = 0;
     
-     function handleAddNewText () {
+    let x = 0;
+    function handleAddNewText () {
         console.log('clicked')
         if (x === 0) {
             newTextContainer.removeAttribute("hidden");
@@ -74,6 +76,13 @@ function submitHandler() {
         x = 0;
     }}
     
+    clearBtn.addEventListener('click', () => {
+      console.log('deleted') 
+      localStorage.clear();
+     if(localStorage.length === 0)
+      document.querySelector('.favcontent').innerHTML = ' ';
+     });
+
     
     
     // };
@@ -89,30 +98,4 @@ function submitHandler() {
 //         document.querySelector('.favcontent').innerHTML = ''; 
 // });
 
-// export const favQuotes = [];
-// console.log(favQuotes);
 
-// const items = [];
-
-// addBtn.addEventListener('click', handleAddNewText);
-
-// let submitBtn = document.querySelector('.js-submit-btn');
-// submitBtn.addEventListener('click', submitHandler);
-
-
-
-
-
-
-
-
-
-
-
-    clearBtn.addEventListener('click', () => {
-      console.log('deleted') 
-      localStorage.clear();
-     if(localStorage.length === 0)
-      document.querySelector('.favcontent').innerHTML = ' ';
-     });
-  

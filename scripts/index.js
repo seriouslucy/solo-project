@@ -31,7 +31,7 @@ function displayRandomQuote(quoteList) {
      <div class="thebuttons">
             <button class="click-me-btn css-click-me-btn">Click Me</button>
             <button data-quote-id="${randomQuote.id}" data-quote-text="${randomQuote.quote}" class="favbtn js-fav-btn"
-            ><img class='star-img' src='./styles/images/star.png'></button> 
+            ><img src='styles/images/star.png' style=width:35%;></button> 
             </div> `;
   let p = document.querySelector(".js-para");
   p.innerHTML = quoteHTML;
@@ -40,7 +40,7 @@ function displayRandomQuote(quoteList) {
 
 function favHandler(favs) {
     let favBtn = document.querySelector(".js-fav-btn")
-    console.log("fav clicked")
+    console.log("Added to favourites!")
 
 
 let id = favBtn.dataset.quoteId
@@ -53,7 +53,7 @@ let quote = favBtn.dataset.quoteText
   if (!alreadyFav) {
     favs.push({id, quote});
   } else {
-    console.log("Already in favorites hoe!");
+    console.log("Already in favourites!");
   }
 
   console.log(favs);

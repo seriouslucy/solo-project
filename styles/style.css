@@ -48,7 +48,7 @@ h1 {
 
 
 .para {
-    margin-top: 5.5em;
+    margin-top: 5em;
     margin-left: 3em;
     margin-right: 3em;
     margin-bottom: 3em;
@@ -103,13 +103,16 @@ border-radius: 10px;
 }
 
 .favbtn {
-    width: 8%;
-    padding: 5px;
-    background: transparent;
+    font-family: 'Venice';
+    font-size: x-large;
+    width: 10%;
+    padding: 10px;
+    background-color: aliceblue;
+    color: rebeccapurple;
     border-radius: 10px;
-    color: black;
     border: none;
-    transition-duration: 0.3s;
+    transition-duration: 0.4s;
+    margin: 10px;
     cursor: pointer;
 }
 
