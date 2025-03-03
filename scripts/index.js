@@ -2,11 +2,7 @@ import { quotes } from "../data/quotes.js";
 let data = JSON.parse(localStorage.getItem('affirmations'))
 let favs = [];
 
-
 data? favs = data : favs = []
-
-console.log(favs);
-
 
 displayRandomQuote(quotes);
 
@@ -46,10 +42,8 @@ function favHandler(favs) {
 let id = favBtn.dataset.quoteId
 let quote = favBtn.dataset.quoteText
 
-  console.log(id, quote);
   const alreadyFav = favs.some((f) => f.id === id);
-  console.log(alreadyFav);
-
+ 
   if (!alreadyFav) {
     favs.push({id, quote});
   } else {
@@ -62,33 +56,3 @@ let quote = favBtn.dataset.quoteText
 
   displayRandomQuote(quotes)
 }
-
-// function setupEventListeners() {
-
-// let newQuoteBtn = document.querySelector('.quotebtn');
-// let p = document.querySelector('.js-para');
-// newQuoteBtn.addEventListener('click', quoteHandler);
-
-// let favBtn = document.querySelector('.js-fav-btn');
-// favBtn.addEventListener('click', favHandler);
-// };
-
-// let favText = document.querySelector('.favouriteList');
-
-// function quoteHandler() {
-
-//     let p = document.querySelector('.js-para')
-//     let randomIndex = Math.floor(Math.random() * quotes.length)
-//     console.log(quotes[randomIndex].quote);
-//     p.innerHTML = quotes[randomIndex].quote;
-
-// };
-
-//  function favHandler() {
-//     let p = document.querySelector('.js-para')
-//     localStorage.setItem('affirmationContent', p.innerHTML)
-//     console.log('Added to favourites!')
-
-// };
-
-// setupEventListeners();

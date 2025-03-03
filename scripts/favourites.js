@@ -1,18 +1,9 @@
-let addBtn = document.querySelector('.js-new-btn');
-let formBtn = document.querySelector('.submit-btn');
-let newTextContainer = document.querySelector('.newtext')
-let clearBtn = document.querySelector('.js-clear-btn')
+let newTextContainer = document.querySelector('.newtext');
+let data = JSON.parse(localStorage.getItem('affirmations'));
+const content = document.querySelector(".js-favcontent");
+displayFavs(data);
 
-let data = JSON.parse(localStorage.getItem('affirmations'))
-const content = document.querySelector(".js-favcontent")
-addBtn.addEventListener("click", () => handleAddNewText())
-
-
-
-displayFavs(data)
-formBtn.addEventListener("click", submitHandler)
-
-function displayFavs(data) {
+export function displayFavs(data) {
     const favoritesHTML = data.map((d) => `
     <div class="quote-data">
     <li>${d.quote}</li> 
@@ -40,7 +31,7 @@ function deleteHandler(b) {
 
 
 
-function submitHandler() {
+export function submitHandler() {
     const userInput = document.querySelector('.newtext-js')
     let textValue = userInput.value
     let id = String(Math.floor(Math.random() * 10000000000000))
@@ -63,10 +54,8 @@ function submitHandler() {
     };
     
     
-    
-    
     let x = 0;
-    function handleAddNewText () {
+    export function handleAddNewText() {
         console.log('clicked')
         if (x === 0) {
             newTextContainer.removeAttribute("hidden");
@@ -76,26 +65,10 @@ function submitHandler() {
         x = 0;
     }}
     
-    clearBtn.addEventListener('click', () => {
+    export function clearPage() {
       console.log('deleted') 
       localStorage.clear();
      if(localStorage.length === 0)
       document.querySelector('.favcontent').innerHTML = ' ';
-     });
-
-    
-    
-    // };
-    // document.addEventListener('DOMContentLoaded', () => {
-//     let storageItem = localStorage.getItem('affirmationContent')
-//     document.querySelector('.favcontent').innerHTML = `${storageItem} <button class="cssRemove">X</button>`;
-//     let removeButton = document.createElement('button');
-//     removeButton.addEventListener('click', () => {
-//         li.remove();
-//     })
-//     // grab button removeItem()
-//     if(localStorage.length === 0)
-//         document.querySelector('.favcontent').innerHTML = ''; 
-// });
-
+     };
 
