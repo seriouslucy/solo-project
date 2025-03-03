@@ -39,5 +39,3 @@ export const quotes = [
             quote: "Opportunities don't happen, you create them. - Chris Grosser"}
             
         ];
-
-    // idk i will figure it out

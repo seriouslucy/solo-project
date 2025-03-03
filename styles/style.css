@@ -11,7 +11,6 @@
 body {
     font-family: Georgia, 'Times New Roman', Times, serif;
     text-align: center;
-    /* animation: colorChange 20s infinite alternate; */
     background-image: url("images/pplhearts.gif");
 }
 
@@ -139,13 +138,6 @@ border-radius: 10px;
     color: rebeccapurple;
     padding: 10px;
 }
-
-/* @keyframes colorChange{
-    0%{background-color: pink;}
-    50%{background-color: plum;}
-    75%{background-color: lightskyblue;}
-    100%{background-color: pink;}
-} */
 
 .thebuttons {
     display: flex;

@@ -1,8 +1,10 @@
 let newTextContainer = document.querySelector('.newtext');
-let data = JSON.parse(localStorage.getItem('affirmations'));
 const content = document.querySelector(".js-favcontent");
+let data = JSON.parse(localStorage.getItem('affirmations'));
 displayFavs(data);
 
+
+// displays favourite quotes
 export function displayFavs(data) {
     const favoritesHTML = data.map((d) => `
     <div class="quote-data">
@@ -20,7 +22,7 @@ export function displayFavs(data) {
 }
 
 
-
+// adds delete buttons to quotes
 function deleteHandler(b) {
     let id = b.dataset.dataId
     const filteredArr = data.filter((d) => d.id !== id)
@@ -30,7 +32,7 @@ function deleteHandler(b) {
 }
 
 
-
+// handles user input text
 export function submitHandler() {
     const userInput = document.querySelector('.newtext-js')
     let textValue = userInput.value
@@ -46,14 +48,15 @@ export function submitHandler() {
         data.push(newItem);
         console.log(data);
         
+        
         localStorage.setItem('affirmations', JSON.stringify(data))
         data = JSON.parse(localStorage.getItem('affirmations'))
         displayFavs(data)
         
-
+        userInput.value = '';
     };
     
-    
+// displays textbox for new quotes button
     let x = 0;
     export function handleAddNewText() {
         console.log('clicked')
@@ -65,6 +68,7 @@ export function submitHandler() {
         x = 0;
     }}
     
+//clears the whole page
     export function clearPage() {
       console.log('deleted') 
       localStorage.clear();
