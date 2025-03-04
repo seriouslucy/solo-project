@@ -59,7 +59,6 @@ export function submitHandler() {
 // displays textbox for new quotes button
     let x = 0;
     export function handleAddNewText() {
-        console.log('clicked')
         if (x === 0) {
             newTextContainer.removeAttribute("hidden");
         x = 1;

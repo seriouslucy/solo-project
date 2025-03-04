@@ -78,14 +78,15 @@ hr {
     box-shadow: 8px 10px 2px 1px rgba(0, 0, 255, .2); 
 }
 
+/* space where quotes are displayed */
 .favcontent {
-    
     font-family: Georgia, 'Times New Roman', Times, serif;
     padding: 5px;
     font-size: x-large;
     color: rgb(234, 172, 183);
 }
 
+/* styling for individual quote blocks */
 .quote-data {
     display: flex;
     justify-content: space-evenly;
@@ -123,17 +124,15 @@ li {
 }
 
 .css-danger-btn {
-
-font-family: 'Venice';
-font-size: large;
-padding: 5px;
-margin: 1em;
-background-color: aliceblue;
-color: blueviolet;
-border: none;
-border-radius: 5px;
-transition-duration: 0.4s;
-
+    font-family: 'Venice';
+    font-size: large;
+    padding: 5px;
+    margin: 1em;
+    background-color: aliceblue;
+    color: blueviolet;
+    border: none;
+    border-radius: 5px;
+    transition-duration: 0.4s;
 }
 
 .css-danger-btn:hover {
@@ -155,16 +154,18 @@ transition-duration: 0.4s;
     padding: 10px;
 }
 
+
+/* The hampters */
 .ham1 {
     position: absolute;
     bottom: 2.5em;
     left: 2em;
     
 }
+
 .ham2 {
     position: absolute;
     bottom: 2.5em;
     right: 2em;
-   
 }
 

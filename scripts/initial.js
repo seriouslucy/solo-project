@@ -1,7 +1,6 @@
 import {handleAddNewText, submitHandler, clearPage} from './favourites.js'
 
 
-
 function setupEventListeners() {
     // for opening text box on favourites
     let addBtn = document.querySelector('.js-new-btn');
